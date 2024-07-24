@@ -1,0 +1,16 @@
+#lang scheme
+(define (make-mobile left right) (list left right))
+(define (make-branch length structure) (list length structure))
+(define (left-branch m) (car m))
+(define (right-branch m) (cadr m))
+(define (branch-length b) (car b))
+(define (branch-structure b) (cadr b))
+(define (total-weight-branch b) (let ((s (branch-structure b))) (if (list? s) (total-weight s) s)))
+(define (total-weight m) (+ (total-weight-branch (left-branch m)) (total-weight-branch (right-branch m))))
+(define (balance? m) (and
+                      (= (* (total-weight-branch (left-branch m)) (branch-length (left-branch m)))
+                         (* (total-weight-branch (right-branch m)) (branch-length (right-branch m)))
+                         )
+                      (let ((s (branch-structure (left-branch m)))) (if (list? s) (balance? s) #t))
+                      (let ((s (branch-structure (right-branch m)))) (if (list? s) (balance? s) #t))
+                      ))
