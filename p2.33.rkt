@@ -6,7 +6,7 @@
       (op (car seq)
           (accumulate op initial (cdr seq)))))
 (define (map p seq)
-  (accumulate (lambda (x y) (cons (p x) y)) nil seq))
+  (accumulate (lambda (x y) (cons (p x) y)) '() seq))
 (define (append seq1 seq2)
   (accumulate cons seq2 seq1))
 ;(append '(1 2 3) '(4 5 0))
