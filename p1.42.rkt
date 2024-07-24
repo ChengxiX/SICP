@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 (define (compose f g) (lambda (x) (f (g x))))
 (define (inc x) (+ 1 x))
-((compose sqr inc) 6)
+((compose square inc) 6)

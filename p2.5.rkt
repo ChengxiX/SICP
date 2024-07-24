@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 ; 不仅是2^a*3^b可以，任意两个互质的数都可以做底
 ; 复杂度O(n)
 (define (cons a b) (* (expt 2 a) (expt 3 b)))

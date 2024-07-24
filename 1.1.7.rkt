@@ -1,9 +1,10 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 
-(define (get-sqrt x min max jingdu)
-  (if (<= (abs (- x (sqr (/ (+ min max) 2)))) jingdu)
+(define (get-squaret x min max jingdu)
+  (if (<= (abs (- x (square (/ (+ min max) 2)))) jingdu)
       (/ (+ min max) 2)
-      (if (> (sqr (/ (+ min max) 2)) x)
-          (get-sqrt x min (/ (+ min max) 2) jingdu)
-          (get-sqrt x (/ (+ min max) 2) max jingdu)
+      (if (> (square (/ (+ min max) 2)) x)
+          (get-squaret x min (/ (+ min max) 2) jingdu)
+          (get-squaret x (/ (+ min max) 2) max jingdu)
 )))

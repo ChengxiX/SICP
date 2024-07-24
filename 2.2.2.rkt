@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 (define (count-leaves li)
   (cond ((null? li) 0)
         ((pair? li) (+ (count-leaves (car li)) (count-leaves (cdr li))))

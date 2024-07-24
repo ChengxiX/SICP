@@ -1,5 +1,6 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 (define (reverse li)
   (define (iter a res) (if (not (null? a)) (iter (cdr a) (cons (car a) res)) res))
-  (iter li '()))
+  (iter li nil))
 (reverse '(1 2 3 5 7))

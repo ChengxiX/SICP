@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 ; 递归
 (define (f n) (if (< n 3) n (+
                              (f (- n 1))

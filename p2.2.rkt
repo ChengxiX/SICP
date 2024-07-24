@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 (define (make-segment a b) (cons a b))
 (define (start-segment seg) (car seg))
 (define (end-segment seg) (cdr seg))

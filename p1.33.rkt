@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 (define (filtered-accumulate combiner null-value filter term a next b)
   (define (iter a result)
     (if (filter a)

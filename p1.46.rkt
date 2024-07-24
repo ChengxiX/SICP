@@ -1,4 +1,5 @@
-#lang scheme
+#lang sicp
+(load "square.rkt")
 (define (iterative-improve-good good-enough? improve)
   (define (iter guess) (if (good-enough? guess) guess
                       (iter (improve guess))))
