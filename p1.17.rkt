@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (double a) (* a 2))
 (define (halve a) (/ a 2))
 (define (times a b)

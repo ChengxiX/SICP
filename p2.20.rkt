@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (same-parity x . ys)
   (define check (if (odd? x) odd? even?))
   ;(define (iter ys res) (if (equal? ys nil) res ; 迭代是倒序

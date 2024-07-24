@@ -1,6 +1,6 @@
-#lang sicp
-(load "square.rkt")
-(load "p2.33.rkt")
+#lang scheme
+
+(require "p2.33.rkt")
 (define (accumulate-n op init seqs)
   (if (null? (car seqs))
       nil

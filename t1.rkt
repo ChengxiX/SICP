@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (m f (n f x))
 ((m f) ((n f) x))
 

@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (my-map f . lists)
   (define (get-car li) (if (null? lists) (cons nil nil)
                         (let ((res (get-car (cdr li))))

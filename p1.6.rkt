@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (new-if predi then-cl else-cl)
   (cond (predi then-cl)
         (else else-cl)))

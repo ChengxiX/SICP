@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (make-mobile left right) (list left right))
 (define (make-branch length structure) (list length structure))
 (define (left-branch m) (car m))

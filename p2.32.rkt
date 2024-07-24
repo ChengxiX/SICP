@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (subsets s)
   (if (null? s)
       (list nil)

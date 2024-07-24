@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (deep-reverse li)
   (define (iter a res) (if (not (null? a)) (iter (cdr a) (cons (if (list? (car a)) (deep-reverse (car a)) (car a)) res)) res))
   (iter li nil))

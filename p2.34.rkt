@@ -1,6 +1,6 @@
-#lang sicp
-(load "square.rkt")
-(load "p2.33.rkt")
+#lang scheme
+
+(require "p2.33.rkt")
 (define (horner-eval x coeff-seq)
   (accumulate (lambda (this-coeff higher-terms)
                 (+ this-coeff (* x higher-terms)))

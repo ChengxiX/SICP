@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (accumulate op initial seq)
   (if (null? seq)
       initial
@@ -13,3 +13,4 @@
 (define (length seq)
   (accumulate (lambda (x y) (+ 1 y)) 0 seq))
 ;(length '(1 2 4 913))
+(provide accumulate)

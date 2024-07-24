@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (append l1 l2) (if (null? l1) l2 (cons (car l1) (append (cdr l1) l2))))
 (define (fringe items)
   (if (null? items) nil (if (list? (car items)) (append (fringe (car items)) (fringe (cdr items))) (cons (car items) (fringe (cdr items))))))

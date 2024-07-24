@@ -1,6 +1,6 @@
-#lang sicp
-(load "square.rkt")
-(load "p2.33.rkt")
+#lang scheme
+
+(require "p2.33.rkt")
 (define (fold-left op initial sequence)
     (define (iter result rest)
         (if (null? rest)

@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (accumulate combiner null-value term a next b)
   (if (> a b) null-value
       (combiner (term a) (accumulate term (next a) next b))))

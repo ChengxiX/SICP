@@ -1,5 +1,5 @@
-#lang sicp
-(load "square.rkt")
+#lang scheme
+
 (define (make-segment a b) (cons a b))
 (define (start-segment seg) (car seg))
 (define (end-segment seg) (cdr seg))
@@ -25,4 +25,4 @@
 ;(define l1 (make-segment p1 p2))
 ;(midpoint-segment l1)
 
-; 练习2.3 还是得使用不同的load才能有效切换表示方式，不能自动切换
+; 练习2.3 还是得使用不同的require才能有效切换表示方式，不能自动切换
