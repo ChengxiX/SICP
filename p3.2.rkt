@@ -1,0 +1,10 @@
+#lang scheme
+(define (make-monitored f) (let ((count 0)) (lambda (a) (cond ((eq? a 'how-many-calls) count)
+                                                              ((eq? a 'reset-count) (set! count 0))
+                                                              (else (set! count (+ count 1)) (f a))))))
+(define cnt (make-monitored sqr))
+(cnt 4)
+(cnt 8)
+(cnt 'how-many-calls)
+(cnt 'reset-count)
+(cnt 'how-many-calls)

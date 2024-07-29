@@ -1,0 +1,12 @@
+(define l1 (cons 'a 'b))
+(define l2 (cons l1 l1))
+(define r3 '(a b c))
+(define r4 (list l1 l1))
+(define r7 (cons l2 l2))
+(define (count-pairs x)
+  (if (not (pair? x))
+      0
+      (+ (count-pairs (car x))
+         (count-pairs (cdr x))
+         1)))
+;(count-pairs r7)

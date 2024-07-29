@@ -1,0 +1,8 @@
+(load "3.16.rkt")
+(define (count-pairs list) (define pairs '())
+                             (define (add p) (set! pairs (cons p pairs)))
+                             (define (find p res) (if (null? res) #f (if (eq? p (car res)) #t (find p (cdr res)))))
+                             (define (rec x) (if (pair? x) (+ (rec (car x)) (rec (cdr x)) (if (find x pairs) 0 (begin (add x) 1))) 0))
+                             (rec list)
+                             )
+(count-pairs r7)
